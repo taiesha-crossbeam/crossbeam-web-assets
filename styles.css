@@ -527,8 +527,10 @@
     .site-nav .promo a{color:#9CFFF8;font-weight:500;text-decoration:none;opacity:1;white-space:nowrap;font-family:var(--cb-font-mono);text-transform:uppercase;letter-spacing:-0.015em;font-size:12px}
 
     /* ---------- HERO ---------- */
-    .hero{position:relative;padding:160px 48px 120px;overflow:hidden}
-    .hero .hero-bg{position:absolute !important;left:0;right:0;top:-30%;width:100%;height:130%;border:0;pointer-events:none;z-index:0}
+    .hero{position:relative;padding:160px 48px 120px;overflow:hidden;background:radial-gradient(ellipse 75% 60% at 50% 0%,rgba(87,255,246,.14) 0%,rgba(87,255,246,.04) 34%,transparent 62%),#030317}
+    /* Fade the colorflow iframe in so its harsh first frame (centred orb) isn't seen; the static teal glow above covers the gap */
+    .hero .hero-bg{position:absolute !important;left:0;right:0;top:-30%;width:100%;height:130%;border:0;pointer-events:none;z-index:0;opacity:0;animation:heroBgIn 1.6s ease .7s forwards}
+    @keyframes heroBgIn{from{opacity:0}to{opacity:1}}
     .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:800px;background:linear-gradient(180deg,rgba(3,3,23,0) 0%,#030317 70%,#030317 100%);pointer-events:none;z-index:1}
     .hero-inner{position:relative;z-index:2}
     .hero-inner{position:relative;z-index:1;max-width:1400px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center}
