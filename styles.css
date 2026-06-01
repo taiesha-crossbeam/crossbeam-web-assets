@@ -2114,3 +2114,7 @@
 .demo-cta .demo-inner{display:block;max-width:680px;margin:0 auto;text-align:center}
     .demo-cta .demo-copy p{margin-left:auto;margin-right:auto}
     .demo-cta-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+/* --- Webflow-collision safety (redesign footer lists never inherit site bullets) --- */
+.footer ul,.footer-bar ul{list-style:none!important;padding-left:0!important}
+.footer li,.footer-bar li{list-style:none!important}
+.footer li::marker,.footer-bar li::marker{content:""!important}
