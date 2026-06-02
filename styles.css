@@ -1780,8 +1780,8 @@
       .brand-img-chatgpt{filter:brightness(0)}
       /* Surface containers */
       .chat-surfaces{position:relative;display:grid;min-height:600px}
-      .chat-surface{grid-area:1 / 1;display:flex;visibility:hidden}
-      .chat-surface .chat-demo{flex:1;display:flex;flex-direction:column}
+      .chat-surface{grid-area:1 / 1;display:flex;visibility:hidden;min-width:0}
+      .chat-surface .chat-demo{flex:1;min-width:0;display:flex;flex-direction:column}
       .chat-surface .chat-demo-stream{flex:1}
       .chat-surfaces[data-active="claude"] .chat-surface[data-surface="claude"],
       .chat-surfaces[data-active="chatgpt"] .chat-surface[data-surface="chatgpt"],
