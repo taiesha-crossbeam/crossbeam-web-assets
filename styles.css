@@ -1779,7 +1779,7 @@
       .brand-img-salesforce{height:24px}
       .brand-img-chatgpt{filter:brightness(0)}
       /* Surface containers */
-      .chat-surfaces{position:relative;display:grid;min-height:672px}
+      .chat-surfaces{position:relative;display:grid;min-height:652px}
       .chat-surface{grid-area:1 / 1;display:flex;visibility:hidden}
       .chat-surface .chat-demo{flex:1;display:flex;flex-direction:column}
       .chat-surface .chat-demo-stream{flex:1}
