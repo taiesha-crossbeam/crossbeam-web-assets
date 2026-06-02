@@ -1805,7 +1805,7 @@
       .chat-demo.salesforce-demo .chat-demo-stream{min-height:398px}
       .sf-context{font-size:12px;color:#5E5E5E;background:#F3F3F2;border-bottom:1px solid #E5E5E5;padding:8px 18px;font-family:Inter,system-ui,sans-serif;letter-spacing:-0.01em}
       .sf-context strong{color:#181818;font-weight:600}
-      @media (max-width:768px){.chat-surfaces{min-height:750px}.chat-demo-stream{padding:20px 18px;gap:10px;min-height:380px}.chat-demo-stream .tool-call{font-size:12px;flex-wrap:wrap}.chat-demo-header{flex-wrap:wrap;gap:8px}.chat-tab{padding:4px 8px;font-size:11px}}
+      @media (max-width:768px){.chat-surfaces{min-height:722px}.chat-demo-stream{padding:20px 18px;gap:10px;min-height:380px}.chat-demo-stream .tool-call{font-size:12px;flex-wrap:wrap}.chat-demo-header{flex-wrap:wrap;gap:8px}.chat-tab{padding:4px 8px;font-size:11px}}
 
 .hero-proof{position:relative;z-index:2;max-width:1040px;margin:48px auto 0;padding:0 8px}
     .hero-proof .pf-c-row{margin-bottom:0;gap:16px}
