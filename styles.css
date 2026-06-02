@@ -1785,8 +1785,8 @@
       /* Surface containers */
       .chat-surfaces{position:relative;display:grid}
       .chat-surface{grid-area:1 / 1;display:flex;visibility:hidden}
-      .chat-surface > .chat-demo{flex:1;display:flex;flex-direction:column}
-      .chat-surface > .chat-demo > .chat-demo-stream{flex:1}
+      .chat-surface .chat-demo{flex:1;display:flex;flex-direction:column}
+      .chat-surface .chat-demo-stream{flex:1}
       .chat-surfaces[data-active="claude"] .chat-surface[data-surface="claude"],
       .chat-surfaces[data-active="chatgpt"] .chat-surface[data-surface="chatgpt"],
       .chat-surfaces[data-active="glean"] .chat-surface[data-surface="glean"],
