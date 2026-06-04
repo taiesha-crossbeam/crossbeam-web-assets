@@ -1,9 +1,5 @@
-/* ===================================================================
-   Crossbeam Design System — colors + type
-   =================================================================== */
 
-/* -------- Brand fonts: Usual (licensed OTFs) -------------------------
-   Crossbeam's display/body face. */
+
 @font-face{font-family:"Usual";src:url("https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/fonts/Usual-Light.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap}
 @font-face{font-family:"Usual";src:url("https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/fonts/Usual-LightItalic.otf") format("opentype");font-weight:300;font-style:italic;font-display:swap}
 @font-face{font-family:"Usual";src:url("https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/fonts/Usual-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
@@ -15,53 +11,48 @@
 @font-face{font-family:"Usual";src:url("https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/fonts/Usual-ExtraBold.otf") format("opentype");font-weight:800;font-style:normal;font-display:swap}
 @font-face{font-family:"Usual";src:url("https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/fonts/Usual-ExtraBoldItalic.otf") format("opentype");font-weight:800;font-style:italic;font-display:swap}
 
-/* Space Mono (small labels) + Inter (UI/numeric fallback) */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap');
 
 :root {
-  /* ---------- Brand marks (logo) ---------- */
-  --cb-mark-teal:   #7ED0DB;   /* top half of the ✕ logo */
-  --cb-mark-red:    #EE3652;   /* bottom half of the ✕ logo */
+  
+  --cb-mark-teal:   #7ED0DB;   
+  --cb-mark-red:    #EE3652;   
 
-  /* ---------- Neutrals / surfaces ---------- */
   --cb-white:       #FFFFFF;
   --cb-off-white:   #FDFDFD;
-  --cb-paper:       #F1F1F1;   /* inset card on light bg */
-  --cb-cream:       #E8E8E8;   /* the site's "light" background */
-  --cb-mist:        #D9D9D9;   /* neutral button fill on light bg */
+  --cb-paper:       #F1F1F1;   
+  --cb-cream:       #E8E8E8;   
+  --cb-mist:        #D9D9D9;   
 
-  --cb-ink:         #030317;   /* darkest — "Ink" */
-  --cb-midnight:    #10103B;   /* default dark — "Midnight" */
-  --cb-teal-dark:   #051E22;   /* alt dark, paired with mint */
-  --cb-plum-dark:   #2B042A;   /* alt dark, paired with pink */
+  --cb-ink:         #030317;   
+  --cb-midnight:    #10103B;   
+  --cb-teal-dark:   #051E22;   
+  --cb-plum-dark:   #2B042A;   
 
-  /* ---------- Text ---------- */
-  --cb-fg-strong:   #000000;   /* H1 on light */
-  --cb-fg:          #0D192A;   /* body on light */
-  --cb-fg-muted:    #435469;   /* secondary body on light */
-  --cb-fg-soft:     #84898F;   /* tertiary / metadata */
+  --cb-fg-strong:   #000000;   
+  --cb-fg:          #0D192A;   
+  --cb-fg-muted:    #435469;   
+  --cb-fg-soft:     #84898F;   
 
-  --cb-fg-inverse:  #FFFFFF;   /* H1 on dark */
-  --cb-fg-inverse-dim: rgba(255, 255, 255, 0.8); /* body on dark */
+  --cb-fg-inverse:  #FFFFFF;   
+  --cb-fg-inverse-dim: rgba(255, 255, 255, 0.8); 
 
-  /* ---------- Accents — 4 core hues, each with a tint ---------- */
-  --cb-violet:      #540AE5;   /* core accent · primary CTA + links */
-  --cb-violet-tint: #F3F1FF;   /* lightest tint for surfaces/backgrounds */
+  --cb-violet:      #540AE5;   
+  --cb-violet-tint: #F3F1FF;   
   --cb-violet-grad: linear-gradient(135deg, #F3F1FF 0%, #540AE5 100%);
 
-  --cb-teal:        #0097A7;   /* core accent · data / success tones */
-  --cb-teal-tint:   #EAFFFC;   /* lightest tint */
+  --cb-teal:        #0097A7;   
+  --cb-teal-tint:   #EAFFFC;   
   --cb-teal-grad:   linear-gradient(135deg, #EAFFFC 0%, #0097A7 100%);
 
-  --cb-fuchsia:     #E044EB;   /* core accent · highlight / feature */
-  --cb-fuchsia-tint:#FEF4FF;   /* lightest tint */
+  --cb-fuchsia:     #E044EB;   
+  --cb-fuchsia-tint:#FEF4FF;   
   --cb-fuchsia-grad:linear-gradient(135deg, #FEF4FF 0%, #E044EB 100%);
 
-  --cb-navy:        #10103B;   /* core accent · deep brand (also dark bg) */
-  --cb-navy-tint:   #F3F1FF;   /* shared with violet tint */
+  --cb-navy:        #10103B;   
+  --cb-navy-tint:   #F3F1FF;   
   --cb-navy-grad:   linear-gradient(135deg, #F3F1FF 0%, #10103B 100%);
 
-  /* Legacy aliases (kept for existing previews; prefer core tokens above) */
   --cb-mint:        #EAFFFC;
   --cb-mint-glow:   rgba(0, 151, 167, 0.25);
   --cb-aqua:        #0097A7;
@@ -70,30 +61,25 @@
   --cb-magenta:     #E044EB;
   --cb-mint-dot:    #EAFFFC;
 
-  /* ---------- Semantic ---------- */
   --cb-bg:          var(--cb-cream);
   --cb-bg-dark:     var(--cb-midnight);
   --cb-card:        var(--cb-paper);
   --cb-accent:      var(--cb-mint);
   --cb-accent-on-dark: var(--cb-mint);
 
-  /* ---------- Type stack ---------- */
   --cb-font-display: "Usual", "Inter", system-ui, -apple-system, sans-serif;
   --cb-font-body:    "Usual", "Inter", system-ui, -apple-system, sans-serif;
   --cb-font-ui:      "Usual", "Inter", system-ui, sans-serif;
   --cb-font-mono:    "Space Mono", ui-monospace, monospace;
   --cb-font-numeric: "Usual", "Inter", system-ui, sans-serif;
 
-  /* ---------- Letter spacing (consistent across site) ---------- */
   --cb-tracking:    -0.015em;
 
-  /* ---------- Radii ---------- */
   --cb-radius-button: 8px;
   --cb-radius-card:   5px;
   --cb-radius-tag:    10px;
   --cb-radius-pill:   999px;
 
-  /* ---------- Space scale (from observed grid) ---------- */
   --cb-space-1:  4px;
   --cb-space-2:  8px;
   --cb-space-3:  12px;
@@ -103,12 +89,9 @@
   --cb-space-7:  64px;
   --cb-space-8:  84px;
   --cb-space-9:  120px;
-  --cb-gutter:   100px;   /* horizontal page padding at 1440 */
+  --cb-gutter:   100px;   
 }
 
-/* =========================================================
-   Type roles — semantic
-   ========================================================= */
 .cb-eyebrow {
   font-family: var(--cb-font-mono);
   font-size: 14px;
@@ -221,9 +204,6 @@
   color: var(--cb-fg-strong);
 }
 
-/* =========================================================
-   Components — buttons, tags
-   ========================================================= */
 .cb-btn {
   display: inline-flex;
   align-items: center;
@@ -244,7 +224,6 @@
 }
 .cb-btn:active { transform: translateY(1px); }
 
-/* on light bg */
 .cb-btn--primary-light {
   background: var(--cb-violet);
   color: #fff;
@@ -270,13 +249,12 @@
 }
 .cb-btn--ghost-light:hover { background: rgba(16,16,59,0.04); }
 
-.cb-btn--neutral {          /* kept for compat */
+.cb-btn--neutral {          
   background: var(--cb-violet-tint);
   color: var(--cb-violet);
 }
 .cb-btn--neutral:hover { background: #E9E5FF; }
 
-/* on dark bg */
 .cb-btn--primary-dark {
   background: var(--cb-teal);
   color: #fff;
@@ -301,7 +279,6 @@
 }
 .cb-btn--ghost-dark:hover { background: rgba(255,255,255,0.06); }
 
-/* Primary CTAs on dark — full-color tinted to pair with surface */
 .cb-btn--primary-midnight,
 .cb-btn--primary-teal-dark {
   background: #9CFFF8;
@@ -329,8 +306,6 @@
   box-shadow: 0 14px 40px -10px rgba(215,208,255,.55);
 }
 
-/* Ghost / secondary on dark — Pace-style: subtle tinted fill + 1px tinted border, lifts on hover.
-   Each variant pairs with its surface’s primary accent (mint on midnight/teal-dark, lavender on plum-dark). */
 .cb-btn--ghost-midnight,
 .cb-btn--ghost-teal-dark {
   background: rgba(156,255,248,0.08);
@@ -344,7 +319,7 @@
   color: #9CFFF8;
   box-shadow: inset 0 0 0 1px rgba(156,255,248,0.34);
 }
-/* Ghost on the bright hero/teal field — darker glass fill so it doesn't wash out */
+
 .cb-btn--ghost-midnight {
   background: rgba(3,3,23,0.34);
   box-shadow: inset 0 0 0 1px rgba(156,255,248,0.30);
@@ -352,18 +327,6 @@
 .cb-btn--ghost-midnight:hover {
   background: rgba(3,3,23,0.46);
   box-shadow: inset 0 0 0 1px rgba(156,255,248,0.45);
-}
-/* Nav sits on the brightest part of the hero glow, so its ghost needs more opacity to match the hero CTA's darkness */
-.site-nav .cb-btn--ghost-midnight {
-  background: rgba(3,3,23,0.55);
-}
-.site-nav .cb-btn--ghost-midnight:hover {
-  background: rgba(3,3,23,0.68);
-}
-/* Nav CTA buttons size-to-content (no 120px floor) and use tighter horizontal padding */
-.site-nav .nav-cta .cb-btn {
-  min-width: 0;
-  padding: 14px 16px;
 }
 
 .cb-btn--ghost-plum-dark {
@@ -378,7 +341,6 @@
   box-shadow: inset 0 0 0 1px rgba(215,208,255,0.34);
 }
 
-/* tags */
 .cb-tag {
   display: inline-flex;
   align-items: center;
@@ -416,14 +378,12 @@
   vertical-align: middle;
 }
 
-/* cards */
 .cb-card {
   background: var(--cb-card);
   border-radius: var(--cb-radius-card);
   padding: 20px;
 }
 
-/* radial glow blob — place inside an overflow:hidden parent */
 .cb-glow {
   position: absolute;
   width: 993px;
@@ -442,95 +402,16 @@
     a{color:inherit}
     section{position:relative}
 
-    /* ---------- NAV ---------- */
     .page-top-mask{position:fixed;top:0;left:0;right:0;height:120px;background:linear-gradient(180deg,#030317 0%,#030317 45%,rgba(3,3,23,.85) 65%,rgba(3,3,23,0) 100%);z-index:40;pointer-events:none;opacity:0;transition:opacity .2s ease}
     body.in-long-wrap .page-top-mask{opacity:1}
-    .site-nav{position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;background:rgba(15,15,45,.25);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:12px 32px;border-bottom:1px solid transparent;transition:background .25s ease,backdrop-filter .25s ease,border-color .25s ease}
-    .site-nav.scrolled{background:rgba(15,15,45,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
     .nav-burger{display:none;background:none;border:0;cursor:pointer;width:40px;height:40px;padding:0;align-items:center;justify-content:center;flex-direction:column;gap:5px;color:#fff;justify-self:end}
     .nav-burger span{display:block;width:22px;height:2px;background:currentColor;border-radius:2px;transition:transform .25s ease,opacity .2s ease}
-    .site-nav.nav-open .nav-burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-    .site-nav.nav-open .nav-burger span:nth-child(2){opacity:0}
-    .site-nav.nav-open .nav-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
     @media (max-width:768px){
-      .site-nav{grid-template-columns:auto auto;padding:14px 18px}
-      .site-nav > ul{display:none}
-      .site-nav .nav-cta{display:none}
       .nav-burger{display:inline-flex}
-      .site-nav.nav-open > ul{display:flex;position:fixed;top:0;bottom:0;left:0;right:0;width:100vw;background:#0A0A2A;flex-direction:column;align-items:stretch;gap:0;margin:0;padding:72px 24px 150px;list-style:none;z-index:1;overflow-y:auto;box-sizing:border-box}
-      /* keep the logo + burger above the full-height panel so the X stays tappable */
-      .site-nav.nav-open .logo,.site-nav.nav-open .nav-burger{position:relative;z-index:5}
-      .site-nav.nav-open .nav-cta{display:flex;position:fixed;left:0;right:0;bottom:0;background:#0A0A2A;flex-direction:column;align-items:stretch;gap:10px;padding:16px 20px 24px;margin:0;z-index:100;border-top:1px solid rgba(255,255,255,.12)}
-      .site-nav .dropdown{display:none!important}
-      .site-nav .nav-item{display:block;width:100%;margin:0}
-      .site-nav .nav-link{display:flex;width:100%;justify-content:flex-start;padding:14px 24px;border-radius:0;font-size:16px;opacity:1}
-      .site-nav .chev{display:none}
-      .site-nav .nav-cta .text-link,.site-nav .nav-cta .cb-btn{width:100%;text-align:center;justify-content:center;box-sizing:border-box;height:auto;padding:14px;font-size:15px}
     }
-    .site-nav > ul{justify-self:center}
-    .site-nav .nav-cta{justify-self:end}
-    .site-nav a{text-decoration:none !important}
-    .site-nav .logo{display:inline-flex;align-items:center;gap:10px;color:#fff;font-weight:500;font-size:15px;margin-right:8px;line-height:0}
-    .site-nav .logo img{height:26px;display:block}
-    .site-nav .nav-cta{display:inline-flex;align-items:center;gap:14px;margin-left:8px}
-    .site-nav .nav-cta .text-link{color:rgba(255,255,255,.85);font-size:14px;letter-spacing:-0.015em;text-decoration:none;font-family:var(--cb-font-body);padding:8px 4px;transition:color .15s ease}
-    .site-nav .nav-cta .text-link:hover{color:#fff}
-    .site-nav ul{list-style:none !important;display:flex;gap:4px;margin:0;padding:0;align-items:center}
-    .site-nav ul li{list-style:none !important;margin:0;padding:0}
-    .site-nav .nav-item{position:relative;display:inline-flex;align-items:center}
-    .site-nav .nav-item:hover::after{content:"";position:absolute;left:-20px;right:-20px;top:100%;height:18px;z-index:99}
-    .site-nav .nav-link{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;color:#fff !important;opacity:.85;font-size:14px;letter-spacing:-0.015em;cursor:pointer;transition:background .15s ease, opacity .15s ease;font-family:var(--cb-font-body);white-space:nowrap;line-height:1}
-    .site-nav .nav-link:hover{background:rgba(255,255,255,.08);opacity:1}
-    .site-nav .nav-item:hover > .nav-link{background:rgba(255,255,255,.08);opacity:1}
-    .site-nav .chev{display:inline-block;width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px;opacity:.6;flex-shrink:0}
 
-    /* dropdown panel */
-    .site-nav .dropdown{position:fixed;top:calc(var(--nav-h, 64px));left:50%;transform:translate(-50%,-6px);width:880px;background:#0A0A2A;border:1px solid rgba(255,255,255,.12);border-radius:12px;box-shadow:0 24px 60px -12px rgba(0,0,0,.6), inset 0 0 0 1px rgba(156,255,248,.04);display:grid;grid-template-columns:220px 1fr;opacity:0;pointer-events:none;transition:opacity .18s ease, transform .18s ease;overflow:hidden;z-index:100}
-    .site-nav .dropdown.narrow{width:720px}
-    .site-nav .nav-item:hover > .dropdown,
-    .site-nav .nav-item:focus-within > .dropdown{opacity:1;pointer-events:auto;transform:translate(-50%,0)}
-    .site-nav .dropdown::before{content:"";position:absolute;left:0;right:0;top:-14px;height:14px}
-
-    .site-nav .dd-aside{background:rgba(255,255,255,.025);padding:22px 14px;border-right:1px solid rgba(255,255,255,.06)}
-    .site-nav .dd-aside h5{margin:0 0 12px;font-family:var(--cb-font-mono);font-size:11px;text-transform:uppercase;letter-spacing:-0.015em;color:rgba(255,255,255,.5);font-weight:400}
-    .site-nav .tab{display:block;padding:9px 12px;border-radius:6px;font-family:var(--cb-font-mono);font-size:12px;font-weight:400;color:rgba(255,255,255,.75);text-decoration:none;margin-bottom:2px;cursor:pointer;letter-spacing:var(--cb-tracking);text-transform:uppercase;opacity:1;transition:background .12s ease, color .12s ease}
-    .site-nav .tab:hover{color:#fff;background:rgba(255,255,255,.05)}
-    .site-nav .tab.active{background:rgba(156,255,248,.10);color:#9CFFF8;box-shadow:inset 0 0 0 1px rgba(156,255,248,.22)}
-
-    .site-nav .panel{display:none;grid-column:2;grid-row:1;padding:24px 26px;grid-template-columns:1fr 1fr;gap:18px 28px;align-content:start}
-    .site-nav .dd-full{grid-column:1 / -1}
-    .site-nav .dd-2col{display:grid;grid-template-columns:1fr 1fr;gap:6px 18px}
-    .site-nav .dropdown[data-tab-group="solutions"] .panel[data-panel="ecosystem"],
-    .site-nav .dropdown[data-tab-group="solutions"] .panel[data-panel="data"],
-    .site-nav .dropdown[data-tab-group="solutions"] .panel[data-panel^="team-"]{min-height:240px}
-    .site-nav .panel.active{display:grid}
-    .site-nav .panel.solo{grid-template-columns:1fr 1fr 1fr}
-    /* Solutions flat mega-menu */
-    .site-nav .dropdown.solutions-flat{width:820px;grid-template-columns:1fr 1fr}
-    .site-nav .dropdown.solutions-flat .sf-col{padding:24px 26px}
-    .site-nav .dropdown.solutions-flat .sf-col + .sf-col{border-left:1px solid rgba(255,255,255,.06)}
-    .site-nav .dropdown.solutions-flat .sf-col h6{margin:0 0 10px;font-family:var(--cb-font-mono);font-size:11px;text-transform:uppercase;letter-spacing:-0.015em;color:rgba(255,255,255,.5);font-weight:400}
-    .site-nav .dropdown.solutions-flat .sf-teams .dd-link{align-items:center}
-    .site-nav .panel h6{margin:0 0 8px;font-family:var(--cb-font-mono);font-size:11px;text-transform:uppercase;letter-spacing:-0.015em;color:rgba(255,255,255,.5);font-weight:400}
-
-    .site-nav .dd-link{display:flex;align-items:flex-start;gap:10px;padding:8px 10px;margin:0 -10px;border-radius:6px;color:rgba(255,255,255,.9);font-size:14px;text-decoration:none;letter-spacing:-0.015em;opacity:1;font-family:var(--cb-font-body);font-weight:400}
-    .site-nav .dd-link:hover{background:rgba(255,255,255,.05);color:#fff;opacity:1}
-    .site-nav .dd-link .ico{width:28px;height:28px;border-radius:6px;background:rgba(156,255,248,.08);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;color:#9CFFF8;border:1px solid rgba(156,255,248,.12)}
-    .site-nav .dd-link .label{font-weight:500;line-height:1.3;display:block;color:#fff}
-    .site-nav .dd-link .sub{display:block;color:rgba(255,255,255,.55);font-size:12.5px;font-weight:400;margin-top:3px;line-height:1.35}
-
-    .site-nav .badge-new{display:inline-block;background:rgba(156,255,248,.15);color:#9CFFF8;font-family:var(--cb-font-mono);font-size:9px;padding:2px 6px;border-radius:4px;margin-left:6px;vertical-align:middle;letter-spacing:-0.015em;text-transform:uppercase;line-height:1}
-
-    .site-nav .promo{display:none!important}
-    .site-nav .promo--keep{display:flex!important;grid-column:1 / -1;margin-top:6px;padding:14px 16px;background:linear-gradient(135deg, rgba(156,255,248,.10) 0%, rgba(156,255,248,0) 100%);border:1px solid rgba(156,255,248,.20);border-radius:8px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:13px;color:rgba(255,255,255,.85);letter-spacing:-0.015em}
-    .site-nav .promo strong{font-weight:500;color:#fff}
-    .site-nav .promo a{color:#9CFFF8;font-weight:500;text-decoration:none;opacity:1;white-space:nowrap;font-family:var(--cb-font-mono);text-transform:uppercase;letter-spacing:-0.015em;font-size:12px}
-
-    /* ---------- HERO ---------- */
     .hero{position:relative;padding:160px 48px 120px;overflow:hidden}
-    /* IMPORTANT: kill any inherited background on .hero-bg. The Webflow site has a leftover
-       .hero-bg class (from an old event page) that sets background:...url(orb-image) — that
-       static orb is what flashed on load. Also fade the iframe in to hide its white load frame. */
+    
     .hero .hero-bg{position:absolute !important;left:0;right:0;top:-30%;width:100%;height:130%;border:0;pointer-events:none;z-index:0;background:none !important;opacity:0;animation:heroBgIn 1.2s ease .15s forwards}
     @keyframes heroBgIn{from{opacity:0}to{opacity:1}}
     .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:800px;background:linear-gradient(180deg,rgba(3,3,23,0) 0%,#030317 70%,#030317 100%);pointer-events:none;z-index:1}
@@ -544,8 +425,6 @@
     .hero-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
     .hero-graph{width:100%;max-width:1240px;margin:80px auto 0;position:relative;z-index:1}
 
-
-    /* ---------- LOGO WALL ---------- */
     .logo-wall{position:relative;padding:40px var(--cb-gutter) 160px;background:#030317;overflow:hidden}
     .hero .logo-wall{background:transparent;padding:80px var(--cb-gutter) 0;z-index:2}
     .logo-wall .lw-heading{text-align:center;font-family:var(--cb-font-mono);font-weight:400;font-size:13px;line-height:150%;letter-spacing:-0.015em;color:rgba(255,255,255,.7);max-width:880px;margin:0 auto 36px;text-wrap:balance;text-transform:uppercase}
@@ -560,20 +439,17 @@
     .logo-row .brand.brand-xl img{max-height:48px;max-width:80px;filter:none;opacity:.95}
     .logo-row .brand.is-swapping img{opacity:0}
 
-    /* ---------- MODULE shared ---------- */
     .module{padding:120px 48px;position:relative}
     .module-inner{max-width:1240px;margin:0 auto}
     .module-eyebrow{display:inline-flex;align-items:center;padding:6px 12px;border-radius:8px;background:rgba(156,255,248,.12);color:#9CFFF8;font-family:var(--cb-font-mono);font-size:11px;letter-spacing:-0.015em;text-transform:uppercase;margin-bottom:20px;border:1px solid rgba(156,255,248,.2)}
     .module-h2{font-family:var(--cb-font-display);font-weight:400;font-size:56px;line-height:105%;letter-spacing:-0.015em;color:#fff;margin:0 0 20px;text-wrap:balance}
     .module-sub{font-size:17px;line-height:155%;color:rgba(255,255,255,.7);margin:0 0 28px;letter-spacing:-0.015em;max-width:560px}
 
-    /* ---------- TEXT REVEAL ---------- */
     .text-reveal{padding:160px var(--cb-gutter);text-align:center;overflow:hidden}
     .text-reveal::before{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:1100px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(0,151,167,.18),transparent 60%);filter:blur(40px);pointer-events:none}
     .text-reveal p{position:relative;font-family:var(--cb-font-display);font-weight:500;font-size:32px;line-height:135%;letter-spacing:var(--cb-tracking);color:#fff;max-width:880px;margin:0 auto;text-wrap:balance}
     .text-reveal em{font-style:normal;color:var(--cb-teal-tint)}
 
-    /* ---------- CTA ---------- */
     .cta{padding:140px var(--cb-gutter);text-align:center;overflow:hidden}
     .cta::before{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:1100px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(0,151,167,.4),transparent 60%);filter:blur(80px);pointer-events:none}
     .cta::after{content:"";position:absolute;left:50%;bottom:-120px;transform:translateX(-50%);width:900px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(224,68,235,.25),transparent 60%);filter:blur(80px);pointer-events:none}
@@ -581,7 +457,6 @@
     .cta p{font-size:18px;color:rgba(255,255,255,.8);margin:0 auto 36px;max-width:540px;line-height:140%;position:relative}
     .cta-row{display:flex;gap:12px;justify-content:center;position:relative;flex-wrap:wrap}
 
-    /* ---------- FOOTER ---------- */
     .footer{background:#03020e;color:rgba(255,255,255,.7);padding:80px var(--cb-gutter) 40px}
     .footer-grid{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;gap:48px;margin-bottom:56px}
     .footer h4{color:rgba(255,255,255,.5);font-family:var(--cb-font-mono);font-size:12px;font-weight:400;margin:0 0 18px;letter-spacing:var(--cb-tracking);text-transform:uppercase}
@@ -601,13 +476,11 @@
       .footer-bar ul{flex-wrap:wrap;justify-content:flex-start;gap:12px 20px}
     }
 
-    /* Footer trust seals — right-aligned row under main footer links */
     .footer-trust-seals{margin-top:36px;display:flex;align-items:center;justify-content:flex-start;gap:14px;flex-wrap:wrap;width:100%}
     .footer-trust-seal{display:flex;align-items:center;justify-content:center;flex-shrink:0}
     .footer-trust-seal img{width:40px;height:40px;object-fit:contain;display:block}
     .footer-trust-seal--sq img{width:34px;height:34px}
 
-    /* AI summary block */
     .footer-ai{margin-top:28px;max-width:300px}
     .footer-ai-eyebrow{font-family:var(--cb-font-mono);font-size:11px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:var(--cb-tracking);margin-bottom:12px;display:inline-flex;align-items:center;gap:6px}
     .footer-ai-btns{display:flex;gap:8px;flex-wrap:wrap}
@@ -615,7 +488,6 @@
     .footer-ai-btn:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:#fff!important}
     .footer-ai-btn svg{width:18px;height:18px;fill:currentColor;flex-shrink:0;display:block}
 
-    /* ---------- DEMO CTA (Section 21) ---------- */
     .demo-cta{padding:120px 48px;position:relative;overflow:hidden;background:linear-gradient(to right,transparent 0%,rgba(156,255,248,.85) 50%,transparent 100%) top/100% 1px no-repeat,#03020e}
     .demo-cta::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:900px;height:600px;border-radius:50%;background:radial-gradient(ellipse,rgba(0,151,167,.45) 0%,transparent 65%);pointer-events:none;z-index:0}
     .demo-cta .demo-ripple{position:absolute;inset:0;pointer-events:none;z-index:0;-webkit-mask-image:linear-gradient(180deg,transparent 0%,transparent 20%,#000 36%,#000 64%,transparent 80%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0%,transparent 20%,#000 36%,#000 64%,transparent 80%,transparent 100%)}
@@ -757,7 +629,7 @@
     .setup-col[data-step="1"].active .dn-trow:not(.dn-active){animation:am-row .42s cubic-bezier(.2,.9,.3,1) forwards,dn-row-dim .4s ease 1.2s forwards}
     .setup-col[data-step="1"].active .dn-popover.dn-popover-2{animation:dn-pop-in .42s cubic-bezier(.2,.9,.3,1.2) 2.5s forwards !important}
     .setup-col[data-step="1"].active .dn-trow.dn-active{animation:am-row .42s cubic-bezier(.2,.9,.3,1) forwards,dn-row-highlight .4s ease 1.1s both}
-    /* Workflow builder (Step 03) */
+    
     .wf-panel{background:#0c1322 !important}
     .wf-panel::before{display:none}
     .wf-alert{position:absolute;left:50%;top:60px;transform:translate(-50%,-12px) scale(.9);width:min(80%,440px);background:#1a2540;border:1px solid #2a3759;border-left:4px solid #F53251;border-radius:14px;padding:18px 20px;display:flex;align-items:center;gap:16px;box-shadow:0 16px 40px -10px rgba(0,0,0,.6),0 0 0 1px rgba(245,50,81,.15);z-index:3;opacity:0;color:#fff}
@@ -808,7 +680,7 @@
     .wf-fanout .wf-node-title{font-size:9px}
     .wf-node.wf-trigger{border-color:#F53251;box-shadow:0 4px 12px -4px rgba(245,50,81,.25)}
     .wf-dot{opacity:0}
-    /* Step 03 animation */
+    
     .wf-trigger .wf-node-body > *{opacity:0;transform:translateX(-10px)}
     .setup-col[data-step="2"].active .wf-trigger .wf-node-body > *{animation:wf-text-in .42s cubic-bezier(.2,.9,.3,1) forwards}
     .setup-col[data-step="2"].active .wf-trigger .wf-node-body .wf-node-eyebrow{animation-delay:2.3s}
@@ -943,8 +815,6 @@
     .gp-cust .gp-win .trophy-svg{color:#D8A94A;width:11px;height:11px;flex-shrink:0}
     .gp-cust .gp-tag.plus{border:none;background:transparent;color:#5f738b;padding:4px 2px;font-size:10px;white-space:nowrap;flex-shrink:0}
 
-
-    /* ----- Use Case 3 — Segments in CRM ----- */
     .seg-mockup{flex:1;display:flex;flex-direction:column;background:#fff;padding:14px 16px;gap:11px;overflow:hidden;font-family:Inter,system-ui,sans-serif;color:#0d192a}
     .seg-head{display:flex;align-items:center;justify-content:space-between}
     .seg-title{font-size:13px;font-weight:700;color:#0d192a;margin:0;letter-spacing:-0.01em}
@@ -1022,10 +892,7 @@
     .av-forecast .bar.hot::before{content:"";position:absolute;top:-7px;left:50%;transform:translateX(-50%);width:7px;height:7px;border-radius:50%;background:#9CFFF8;box-shadow:0 0 8px rgba(156,255,248,.7)}
     .av-forecast .axis{position:absolute;left:0;right:0;bottom:24px;height:1px;background:rgba(156,255,248,.18)}
     .agentic-cta .meta{font-family:var(--cb-font-mono);font-size:11px;color:rgba(255,255,255,.5);letter-spacing:-0.015em;text-transform:uppercase}
-    @media (max-width:1100px){
-    }
 
-    /* ---------- INTEGRATIONS ---------- */
     .integrations{position:relative}
     .integrations-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:110px;align-items:center}
     .integrations-copy{text-align:left}
@@ -1036,7 +903,6 @@
     .int-cta i{transition:transform .2s ease}
     .int-cta:hover i{transform:translateX(3px)}
 
-    /* Circle Hub */
     .p-circle .stage{position:relative;aspect-ratio:1/1;width:100%;max-width:720px;margin:0 auto;display:flex;align-items:center;justify-content:center}
     .p-circle .rings{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:0}
     .p-circle .rings .seg{fill:#06061c;stroke:rgba(255,255,255,.10);stroke-width:1.5;transition:fill .15s;animation:cb-seg-pulse 3.2s ease-in-out infinite;cursor:pointer}
@@ -1203,7 +1069,6 @@
     .uc-proof.tbd .uc-proof-co{color:rgba(255,255,255,.45)}
     .uc-proof.tbd .uc-proof-stat{color:rgba(255,255,255,.5);font-style:italic}
 
-    /* ---------- PROOF (Section 17) ---------- */
     .proof-wrap{position:relative;overflow:hidden}
     .proof-wrap::before{content:"";position:absolute;left:-200px;top:80px;width:600px;height:300px;border-radius:50%;background:rgba(0,151,167,.20);filter:blur(110px);pointer-events:none}
     .proof-wrap::after{content:"";position:absolute;right:-200px;bottom:80px;width:600px;height:300px;border-radius:50%;background:rgba(224,68,235,.14);filter:blur(110px);pointer-events:none}
@@ -1222,7 +1087,7 @@
     .pf-c-card .who .logo{height:18px;width:auto;opacity:.8;filter:brightness(0) invert(1)}
     .pf-c-card .who .name{font-family:var(--cb-font-mono);font-size:10px;color:rgba(255,255,255,.55);letter-spacing:-0.015em;text-transform:uppercase}
     @media (max-width:1000px){.pf-c-row{grid-template-columns:1fr}}
-    /* Bento proof grid */
+    
     .bento-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative;margin-bottom:56px}
     .bento-card{position:relative;display:block;text-decoration:none;color:inherit;perspective:1400px;min-height:196px;cursor:pointer}
     .bento-quote{grid-column:span 2;min-height:272px}
@@ -1246,7 +1111,7 @@
     .bento-meta-left{display:flex;align-items:center;gap:10px;min-width:0}
     .bento-avatar{width:36px;height:36px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#10103B;font-size:18px;flex-shrink:0;border:1px solid rgba(255,255,255,.18)}
     .bento-logo{font-family:var(--cb-font-display);font-weight:600;font-size:18px;color:#fff;letter-spacing:-0.015em}
-    /* Brand-mark logos on bento cards — per-logo heights tuned to optically match */
+    
     .bento-brand{height:22px;display:flex;align-items:center}
     .bento-brand img{height:22px;width:auto;max-width:100%;display:block;filter:brightness(0) invert(1);opacity:.92}
     .bento-brand img[alt="Stripe"]{height:44px}
@@ -1269,14 +1134,12 @@
     .bento-quote figcaption strong{font-weight:500;font-size:13px;color:#fff;letter-spacing:-0.015em}
     .bento-quote figcaption span{font-size:11px;color:rgba(255,255,255,.6);letter-spacing:-0.015em;line-height:140%}
 
-    /* Bento color variants — subtle tints */
     .bento-tint--mint    .bento-front{background:linear-gradient(135deg,rgba(156,255,248,.10) 0%,rgba(0,151,167,.06) 100%);border-color:rgba(156,255,248,.22)}
     .bento-tint--plum    .bento-front{background:linear-gradient(135deg,rgba(84,10,229,.18) 0%,rgba(84,10,229,.06) 100%);border-color:rgba(84,10,229,.28)}
     .bento-tint--pink    .bento-front{background:linear-gradient(135deg,rgba(224,68,235,.14) 0%,rgba(224,68,235,.04) 100%);border-color:rgba(224,68,235,.26)}
     .bento-tint--aqua    .bento-front{background:linear-gradient(135deg,rgba(0,151,167,.20) 0%,rgba(0,151,167,.06) 100%);border-color:rgba(0,151,167,.30)}
     .bento-tint--cream   .bento-front{background:linear-gradient(135deg,rgba(255,209,220,.10) 0%,rgba(255,209,220,.03) 100%);border-color:rgba(255,209,220,.18)}
 
-    /* Bento back face — per-variant flip side & CTA */
     .bento-tint--mint  .bento-back{background:linear-gradient(135deg,rgba(0,151,167,.22) 0%,rgba(156,255,248,.08) 100%);border-color:rgba(156,255,248,.30)}
     .bento-tint--mint  .bento-back-cta{color:#9CFFF8;border-color:rgba(156,255,248,.45);background:rgba(156,255,248,.10)}
     .bento-tint--mint .bento-back-cta:hover{background:rgba(156,255,248,.22)}
@@ -1330,7 +1193,6 @@
       .proof-cases{grid-template-columns:1fr}
     }
 
-    /* ---------- TRUST & SECURITY (Section 19) ---------- */
     .trust{padding:120px 48px;position:relative;overflow:hidden}
     .trust::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(0,151,167,.1) 0%,transparent 55%);pointer-events:none}
     .trust-inner{max-width:1100px;margin:0 auto;position:relative;text-align:center}
@@ -1383,7 +1245,6 @@
     .deeper-media--news .nl .ln.medium{width:78%}
     .deeper-media--news .nl .btn{margin-top:12px;width:38%;height:14px;border-radius:3px;background:#E044EB}
 
-    /* ---------- LONG SECTION WITH STICKY NAV ---------- */
     .long-wrap{position:relative;background:#030317;padding:32px 24px 40px}
     .long-wrap-inner{display:grid;grid-template-columns:1fr;gap:32px;max-width:1080px;margin:0 auto;position:relative}
     .long-nav{position:sticky;top:100px;align-self:start;display:flex;flex-direction:column;gap:4px;padding:8px 0}
@@ -1397,7 +1258,7 @@
     .long-content > section.shift{padding-left:0;padding-right:0}
     .long-content > section.deeper{padding-left:0;padding-right:0}
     .long-content > section.trust{padding-left:0;padding-right:0}
-    /* Reset all section colour blurs inside long-wrap, then add a uniform top gradient */
+    
     .long-content .shift{background:#030317}
     .long-content .agentic::before,
     .long-content .agentic::after,
@@ -1429,7 +1290,6 @@
     }
     .long-content > section > *{position:relative;z-index:1}
 
-    /* Tighten every section to fit the narrower content column */
     .long-content > section.module{padding-top:120px;padding-bottom:200px}
     .long-content > section.proof-wrap.module{padding-bottom:80px}
     .long-content .module-inner{max-width:none}
@@ -1437,7 +1297,6 @@
     .long-content .integrations-h2{font-size:48px;line-height:108%}
     .long-content .module-sub{font-size:15px;margin-bottom:20px}
 
-    /* Shift */
     .long-content .shift{padding:64px 0 160px}
     .long-content .shift-head{margin:0 auto 48px}
     .long-content .shift-head h2{font-size:48px;margin-bottom:16px}
@@ -1451,12 +1310,10 @@
     .long-content .shift-foot-text{font-size:15px}
     .long-content .shift-foot-text .lede{font-size:20px}
 
-    /* How it works carousel */
     .long-content #howViewport{padding:8px 24px 24px}
     .long-content .setup-col{flex:0 0 calc(85% - 20px)}
     .long-content .setup-col h3{font-size:20px}
 
-    /* Agentic — Combo layout fitted to long-wrap column */
     .long-content > section.p-combo{padding:160px 40px 160px;border-radius:18px}
     .long-content .p-combo-inner{max-width:none}
     .long-content .p-combo::before{right:-180px;left:auto;top:50%;bottom:auto;transform:translateY(-50%);width:560px;height:560px;background:radial-gradient(circle,rgba(238,124,246,.6) 0%,rgba(238,124,246,.2) 50%,transparent 75%);filter:blur(120px)}
@@ -1493,7 +1350,6 @@
       .long-content .p-combo-strip{grid-template-columns:1fr;text-align:left}
     }
 
-    /* Core use cases */
     .long-content .uc-viewport{margin:0}
     .long-content .uc-row{padding:8px 0 28px;scroll-padding-left:0}
     .long-content .uc-card{flex:0 0 320px}
@@ -1501,7 +1357,6 @@
     .long-content .uc-fade-l{background:linear-gradient(to right,#030317 0%,rgba(3,3,23,0) 100%)}
     .long-content .uc-fade-r{background:linear-gradient(to left,#030317 0%,rgba(3,3,23,0) 100%)}
 
-    /* Proof */
     .long-content .proof-hero{gap:56px;margin-bottom:56px}
     .long-content .proof-head{margin:0 0 40px}
     .long-content .proof-metrics{gap:32px}
@@ -1518,7 +1373,6 @@
     .long-content .proof-quote{padding:24px;gap:18px}
     .long-content .proof-quote blockquote{font-size:16px}
 
-    /* Trust */
     .long-content .trust{padding:64px 0 160px}
     .long-content .trust h2{font-size:48px}
     .long-content .trust p.lede{font-size:15px;margin-bottom:36px}
@@ -1527,7 +1381,6 @@
     .long-content .trust-badge-seal{width:60px;height:60px}
     .long-content .trust-badge-seal i{font-size:24px}
 
-    /* Dive deeper */
     .long-content .deeper{padding:64px 0 160px}
     .long-content .deeper-head{margin-bottom:32px}
     .long-content .deeper h2{font-size:36px}
@@ -1549,7 +1402,6 @@
       .long-nav a.active{border-left:0;border-bottom-color:#9CFFF8}
     }
 
-    /* ---------- RESPONSIVE ---------- */
     @media (max-width: 1100px){
       .hero,.logo-wall,.text-reveal,.cta,.footer{padding-left:48px;padding-right:48px}
       .hero{padding-top:140px}
@@ -1557,8 +1409,6 @@
       .module-h2{font-size:40px}
     }
     @media (max-width: 720px){
-      .site-nav ul{display:none}
-      .site-nav{gap:16px;padding:8px 8px 8px 16px}
       .hero h1{font-size:40px}
       .cta h2{font-size:44px}
       .text-reveal p{font-size:24px}
@@ -1566,7 +1416,7 @@
       .logo-wall .lw-heading{font-size:12px}
     }
     @media (max-width:768px){
-      /* 1. Long content section — drop the sidebar nav, scroll through sections */
+      
       .long-wrap{padding:24px 16px 100px}
       .long-wrap-inner{grid-template-columns:1fr;gap:0;padding-left:0}
       .long-nav{display:none}
@@ -1583,7 +1433,7 @@
       #use-cases .gp-popover .pop-text{font-size:11.5px}
       #use-cases .gp-popover .pop-lbl{font-size:10px}
       #use-cases .gp-popover .pop-chip{font-size:10.5px;padding:5px 8px 5px 7px}
-      /* 6. Integrations ring — smaller logos */
+      
       .p-circle .seg-logo{font-size:10px}
       .p-circle .seg-logo .brand{height:22px;max-width:64px}
       .p-circle .seg-logo svg.brand{width:64px;height:22px}
@@ -1603,125 +1453,94 @@
       .p-circle .seg-logo.outer .brand.mark.big{width:26px;height:26px}
       .p-circle .seg-logo.outer .brand.mark.plus{width:24px;height:24px}
       .p-circle .seg-logo.outer .brand.med{height:22px;max-width:60px}
-      /* 7. Proof metric cards — smaller number, eyebrow stacked above */
+      
       .pf-c-card{padding:22px;gap:14px}
       .pf-c-card .top{flex-direction:column-reverse;align-items:flex-start;gap:10px}
       .pf-c-card .num{font-size:54px}
       .pf-c-card .label{font-size:16px}
-      /* 8. Proof bento — move "100+ teams" card to last position, auto-height cards */
+      
       .bento-cta{order:99}
       .bento-card{min-height:auto}
       .bento-quote{min-height:auto}
       .bento-card .bento-inner{position:relative;transform:none!important}
       .bento-card .bento-face{position:relative;inset:auto}
       .bento-card .bento-back{display:none}
-      /* 9. Trust & Security — 2×2 grid */
+      
       .trust-badges{grid-template-columns:repeat(2,1fr)!important;gap:12px}
       .trust-badge{padding:22px 16px;gap:10px}
       .trust-badge-seal{width:56px;height:56px}
       .trust-badge h3{font-size:15px}
-      /* 10. Mobile nav — logo + burger only (reinforced). Use :not(.nav-open) so the
-         open panel rules (.site-nav.nav-open > ul / .nav-cta) can override and show the menu. */
-      .site-nav:not(.nav-open) > ul,.site-nav:not(.nav-open) .nav-cta{display:none!important}
-      .site-nav{grid-template-columns:1fr auto!important}
-      /* When the menu is open, drop the header's backdrop-filter so it no longer acts as a
-         containing block — lets the fixed menu panel & CTA bar position against the viewport. */
-      .site-nav.nav-open{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:#0A0A2A!important}
-      /* Stack link above its dropdown (base .nav-item is inline-flex) + kill the pill look */
-      .site-nav.nav-open .nav-item{display:block!important;width:100%!important;position:static!important;align-items:stretch!important}
-      .site-nav.nav-open .nav-link{display:flex!important;width:100%!important;justify-content:flex-start!important;align-items:center!important;border-radius:0!important;padding:14px 24px!important;font-size:16px!important;white-space:normal!important}
-      /* Dropdown: always rendered but height-animated for a smooth accordion expand */
-      .site-nav.nav-open .nav-item > .dropdown{display:block!important;position:static!important;transform:none!important;width:100%!important;max-width:none!important;min-height:0!important;max-height:0;background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;grid-template-columns:none!important;grid-template-rows:none!important;gap:0!important;overflow:hidden;opacity:1!important;pointer-events:auto!important;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
-      .site-nav.nav-open .nav-item.dd-open > .dropdown{max-height:1600px;padding:2px 0 12px!important}
-      /* Force any non-open dropdown closed (covers solutions-flat which wasn't collapsing) */
-      .site-nav.nav-open .nav-item:not(.dd-open) > .dropdown{max-height:0!important;padding:0!important;overflow:hidden!important}
-      /* Hide all desktop mega-menu chrome on mobile: tab rail, promo cards, Salesforce visual */
-      .site-nav.nav-open .dropdown .dd-aside,.site-nav.nav-open .dropdown .promo,.site-nav.nav-open .dropdown .sf-frame{display:none!important}
-      /* panel/columns were placed in grid-column 2 → reset so content isn't right-shifted */
-      .site-nav.nav-open .dropdown .panel,.site-nav.nav-open .dropdown .sf-col{display:block!important;position:static!important;grid-column:auto!important;grid-row:auto!important;width:100%!important;min-height:0!important;opacity:1!important;visibility:visible!important;grid-template-columns:none!important;gap:0!important;padding:0!important;border:0!important;margin:0!important}
-      .site-nav.nav-open .dropdown .panel > div:not(.promo){display:block!important;width:100%!important;margin:0!important}
-      .site-nav.nav-open .dropdown h5,.site-nav.nav-open .dropdown h6{display:block!important;text-align:left!important;font-family:var(--cb-font-mono)!important;font-size:10.5px!important;font-weight:400!important;letter-spacing:.08em!important;text-transform:uppercase!important;color:rgba(255,255,255,.4)!important;padding:12px 0 2px 24px!important;margin:0!important}
-      .site-nav.nav-open .dropdown .dd-link{display:flex!important;align-items:center!important;gap:12px!important;text-align:left!important;width:100%!important;padding:9px 24px!important;border-radius:0!important;background:none!important}
-      .site-nav.nav-open .dropdown .dd-link .sub{display:none!important}
-      /* Square icon tiles (my earlier width:auto turned them into tall rectangles) */
-      .site-nav.nav-open .dropdown .dd-link .ico{flex:0 0 auto!important;width:28px!important;height:28px!important;min-width:28px!important;border-radius:7px!important;margin:0!important}
-      .site-nav.nav-open .dropdown a:not(.dd-link){display:block!important;text-align:left!important;padding-left:24px!important}
-      .site-nav.nav-open .nav-item .chev{transition:transform .25s ease}
-      .site-nav.nav-open .nav-item.dd-open > .nav-link .chev{transform:rotate(225deg)!important}
-      /* 11. Tighten mobile side padding (48px/100px gutters were ~25% of a 375px screen) */
+      
       :root{--cb-gutter:22px}
       .hero{padding-left:22px!important;padding-right:22px!important}
       .module{padding-left:22px!important;padding-right:22px!important}
       .module-inner{padding-left:0!important;padding-right:0!important}
     }
-    /* ============ Mobile polish pass (≤768px) ============ */
+    
     @media (max-width:768px){
-      /* Nav open CTA bar — full viewport width */
-      .site-nav.nav-open .nav-cta{width:100vw;box-sizing:border-box}
-      /* Footer — tighten extreme spacing */
+      
       .footer{padding-top:48px!important;padding-bottom:32px!important;padding-left:22px!important;padding-right:22px!important}
       .footer-grid{grid-template-columns:1fr 1fr!important;gap:28px 36px!important;margin-bottom:32px!important}
-      /* Brand block spans full width on top; link columns flow as a tidy 2-col grid below */
+      
       .footer-grid > :first-child{grid-column:1 / -1!important;margin-bottom:4px!important}
       .footer ul{gap:9px!important}
       .footer ul li{margin:0!important}
-      /* Case-study / bento cards — left-align content */
+      
       .bento-face,.bento-front,.bento-back{align-items:flex-start!important;text-align:left!important}
-      /* Proof small cards — more room between logo and text */
-      /* Compact metric cards on mobile — mirror the tight desktop row layout */
+
       .pf-c-card,.hero-proof .pf-c-card{position:relative!important;padding:22px!important;gap:8px!important;min-height:0!important}
       .pf-c-card .top{display:flex!important;flex-direction:row!important;align-items:flex-start!important;justify-content:space-between!important;gap:12px!important;margin:0!important}
       .pf-c-card .num,.hero-proof .pf-c-card .num{font-size:46px!important;line-height:1!important;margin:0!important}
       .pf-c-card .top .badge{position:static!important;margin:0!important;flex:0 0 auto!important;align-self:flex-start!important}
       .pf-c-card .label,.hero-proof .pf-c-card .label{margin:0!important}
-      /* Integrations CTA — keep "See all integrations" on one line */
+      
       .int-cta{white-space:nowrap}
-      /* Reduce the tall desktop section padding on mobile (esp. proof & integrations bottoms) */
+      
       .module{padding-top:56px!important;padding-bottom:56px!important}
       .proof-wrap.module,#proof.module{padding-bottom:36px!important}
       #agentic.module{padding-bottom:36px!important}
-      /* Proof cards — breathing room between the logo and the stat/text */
+      
       .bento-brand,.bento-logo{margin-bottom:14px!important}
-      /* Conventional mobile type scale (subtext/leads were desktop-sized) */
+      
       .hero-lead{font-size:16px!important;line-height:1.55!important;margin-top:24px!important}
       .module-sub,.integrations-sub{font-size:15px!important;line-height:1.55!important}
       .hero h1{font-size:36px!important;line-height:1.1!important}
       .module-h2,.integrations-h2{font-size:30px!important;line-height:1.12!important}
       .cta h2{font-size:34px!important}
       .module-eyebrow,.hero-eyebrow{font-size:11px!important}
-      /* Logo wall — horizontal marquee instead of a tall stack */
+      
       #logo-cycler{overflow:hidden;gap:20px!important}
       .logo-row.lw-marquee-row{flex-wrap:nowrap!important;justify-content:flex-start!important;width:max-content;gap:44px!important;padding:0!important;animation:lw-marq 26s linear infinite;will-change:transform}
       .logo-row.row-offset.lw-marquee-row{animation:lw-marq-rev 32s linear infinite}
       .logo-row.lw-marquee-row .brand{flex:0 0 auto}
-      /* How-it-works — single column; step mockup renders inside the open dropdown */
+      
       #how-it-works .hiw-grid{grid-template-columns:1fr!important;gap:0!important;margin-top:32px!important}
       #how-it-works .hiw-body{padding-left:0!important;padding-right:0!important;max-width:100%!important}
-      /* Reclaim the module's side padding for more image width; taller box for popovers */
+      
       #how-it-works .hiw-bodywrap .hiw-media{width:calc(100% + 34px);margin-left:-17px;margin-right:-17px;margin-top:14px;aspect-ratio:5/6}
-      /* Lighter bottom fade so the mockups read clearly on mobile */
+      
       #how-it-works .hiw-mockup::after{height:44px!important}
-      /* Step 2 (Deal Navigator) — pull the score popover in from the right edge */
+      
       #how-it-works .hiw-mockup[data-step="1"] .s2-popover--score{right:6px!important;left:auto!important}
-      /* Step 3 (Workflow) — ease the zoom so all 3 bottom nodes stay in frame */
+      
       #how-it-works .hiw-mockup[data-step="2"] .wf-canvas{transform:scale(1)!important;padding-top:24px!important}
-      /* Step 4 (Performance) — shrink oversized KPI numbers so "12 days" fits one line */
+      
       #how-it-works .hiw-mockup[data-step="3"] .s4-kpi-val{font-size:12px!important;white-space:nowrap!important}
       #how-it-works .hiw-mockup[data-step="3"] .s4-hero-val{font-size:15px!important}
-      /* Step 4 — hide the bottom data table, and bottom-align the split card values (152/76%, 29/29%) */
+      
       #how-it-works .hiw-mockup[data-step="3"] .s4-lost{display:none!important}
       #how-it-works .hiw-mockup[data-step="3"] .s4-mcard-split{align-items:flex-end!important}
-      /* Chat demo — simplify/tighten for narrow widths */
+      
       .hero-chat-wrap{margin-top:72px!important;padding-left:4px!important;padding-right:4px!important}
       .chat-user,.chat-claude{max-width:92%!important;font-size:14px!important}
       .tool-call{max-width:100%!important;font-size:12px!important}
-      /* Reserve the fully-loaded height so the chat doesn't grow/reflow as messages animate in */
+      
       .chat-demo-stream{padding:16px 14px!important;min-height:600px!important}
       .chat-claude .action-btn{font-size:12px!important;padding:7px 11px!important}
     }
     @keyframes lw-marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
     @keyframes lw-marq-rev{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-    /* Tablet type scale (≤1024px) — dial leads/headlines down from desktop */
+    
     @media (max-width:1024px){
       .hero-lead{font-size:18px}
       .hero h1{font-size:clamp(44px,7vw,64px)}
@@ -1778,7 +1597,7 @@
       .brand-img{height:22px;width:auto;display:block}
       .brand-img-salesforce{height:24px}
       .brand-img-chatgpt{filter:brightness(0)}
-      /* Surface containers */
+      
       .chat-surfaces{position:relative;display:grid;min-height:600px}
       .chat-surface{grid-area:1 / 1;display:flex;visibility:hidden;min-width:0}
       .chat-surface .chat-demo{flex:1;min-width:0;display:flex;flex-direction:column}
@@ -1787,18 +1606,18 @@
       .chat-surfaces[data-active="chatgpt"] .chat-surface[data-surface="chatgpt"],
       .chat-surfaces[data-active="glean"] .chat-surface[data-surface="glean"],
       .chat-surfaces[data-active="salesforce"] .chat-surface[data-surface="salesforce"]{visibility:visible}
-      /* ChatGPT skin */
+      
       .chat-demo.chatgpt-demo{--claude-cream:#FFFFFF;--claude-cream-light:#FBFBFB;--claude-border:#E5E5E5;--claude-border-soft:#ECECEC;--claude-text:#0D0D0D;--claude-text-soft:#6E6E80;--claude-orange:#10A37F}
       .chat-demo.chatgpt-demo .chat-claude .highlight{background:#D6F4E5;color:#0D0D0D}
       .chat-demo.chatgpt-demo .chat-demo-input{background:#F4F4F4;border-color:transparent}
       .chat-demo.chatgpt-demo .chat-demo-input .send{background:#0D0D0D;color:#fff}
-      /* Glean skin */
+      
       .chat-demo.glean-demo{--claude-cream:#F8F9FD;--claude-cream-light:#FFFFFF;--claude-border:#DDE2EE;--claude-border-soft:#ECEEF6;--claude-text:#1A1F36;--claude-text-soft:#5E6986;--claude-orange:#343CED}
       .chat-demo.glean-demo .chat-claude .highlight{background:#E1E3FB;color:#1A1F36}
       .chat-demo.glean-demo .mcp-badge.mcp-glean{background:#EEF0FD;border-color:#C8CDF6;color:#343CED}
       .chat-demo.glean-demo .mcp-badge.mcp-salesforce{background:#E8F4FB;border-color:#B4DCEE;color:#00A1E0}
       .chat-demo.glean-demo .chat-demo-input{background:#fff}
-      /* Salesforce / Agentforce skin */
+      
       .chat-demo.salesforce-demo{--claude-cream:#FAFAF9;--claude-cream-light:#FFFFFF;--claude-border:#C9C9C9;--claude-border-soft:#E5E5E5;--claude-text:#181818;--claude-text-soft:#5E5E5E;--claude-orange:#0176D3}
       .chat-demo.salesforce-demo .chat-claude .highlight{background:#D8E6F6;color:#181818}
       .chat-demo.salesforce-demo .chat-demo-input{background:#fff}
@@ -1837,42 +1656,39 @@
       .hiw-media img{width:100%;height:100%;object-fit:cover;display:block}
       .hiw-media-ph{font-family:var(--cb-font-mono);font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.3)}
 
-      /* Step mockups inside the accordion's image space */
       .hiw-media{padding:0;overflow:hidden;background:#0E0E1F;--hiw-mockup-scale:0.62}
       .hiw-media .hiw-mockups{position:relative;width:100%;height:100%}
       .hiw-media .hiw-mockup{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility 0s .35s;background:transparent !important;border:0 !important;box-shadow:none !important}
       .hiw-media .hiw-mockup.active{opacity:1;visibility:visible;transition:opacity .35s ease}
-      /* Scale each panel down to fit the wrapper while preserving its native layout */
+      
       .hiw-media .setup-panel{position:absolute;top:0;left:0;width:calc(100% / var(--hiw-mockup-scale));height:calc(100% / var(--hiw-mockup-scale));margin:0;transform:scale(var(--hiw-mockup-scale));transform-origin:top left}
-      /* Snap mockup animations to final state — EXCEPT steps 1, 2, 3 & 4, which have their own reductive animations */
+      
       .hiw-media .hiw-mockup:not([data-step="0"]):not([data-step="1"]):not([data-step="2"]):not([data-step="3"]) *,
       .hiw-media .hiw-mockup:not([data-step="0"]):not([data-step="1"]):not([data-step="2"]):not([data-step="3"]) *::before,
       .hiw-media .hiw-mockup:not([data-step="0"]):not([data-step="1"]):not([data-step="2"]):not([data-step="3"]) *::after{animation-duration:0s !important;animation-delay:0s !important}
-      /* Pin non-active step 2 mockup risen (only step 2 still animates; while not active it shouldn't be stuck mid-drop) */
+      
       .hiw-media .hiw-mockup:not([data-step="0"]):not([data-step="1"]):not([data-step="2"]):not([data-step="3"]) .wf-mockup{transform:translateY(0) !important}
 
-      /* Step 3 (data-step=2 workflow) — rebalanced for 4:3 wrapper: zoom in, fully drop popup off-screen, drop alert clean off the bottom. */
       .hiw-media .hiw-mockup[data-step="2"]{--hiw-mockup-scale:0.82}
-      /* Initial peek: workflow card's topbar visible at the bottom (like the native carousel). The card sits ABOVE the alert so when it rises it covers the alert. */
+      
       .hiw-media .hiw-mockup[data-step="2"] .wf-mockup{transform:translateY(calc(100% - 32px));z-index:4}
       .hiw-media .hiw-mockup[data-step="2"] .wf-alert{z-index:1}
       .hiw-media .hiw-mockup[data-step="2"].active .wf-mockup{animation:hiw-wf-rise .75s cubic-bezier(.2,.85,.25,1) 1.95s forwards}
       @keyframes hiw-wf-rise{from{transform:translateY(calc(100% - 32px))}to{transform:translateY(0)}}
       .hiw-media .hiw-mockup[data-step="2"].active .wf-alert{animation:wf-alert-in .5s cubic-bezier(.2,.9,.3,1.2) .2s forwards, hiw-wf-alert-fire .75s cubic-bezier(.5,0,.9,.6) 1.6s forwards}
-      /* Drop the alert far enough to clear the taller hiw-media panel (native panel was 380px; here it's ~720px in panel coords). */
+      
       @keyframes hiw-wf-alert-fire{0%{opacity:1;transform:translate(-50%,0) scale(1)}100%{opacity:0;transform:translate(-50%,560px) scale(.94)}}
-      /* Scale UP the workflow canvas contents (nodes, lines, grid) — topbar and alert stay at their original size. */
+      
       .hiw-media .hiw-mockup[data-step="2"] .wf-canvas{transform:scale(1.28);transform-origin:center top;padding-top:48px}
-      /* Lighter text weight inside the workflow nodes for this section. */
+      
       .hiw-media .hiw-mockup[data-step="2"] .wf-node-eyebrow{font-weight:500;color:#a3b1c4}
       .hiw-media .hiw-mockup[data-step="2"] .wf-node-title{font-weight:600;color:#3e4d63}
-      /* Lighter stroke around the 3 fanout action nodes (Slack / Salesforce / HubSpot). */
+      
       .hiw-media .hiw-mockup[data-step="2"] .wf-action .wf-stroke-rect{stroke:#b9c6d6;stroke-width:1.5}
-      /* Salesforce icon — stay square. The 273×191 wordmark SVG has no viewBox, so force letterboxing via max-width/auto-height inside the square container. */
+      
       .hiw-media .hiw-mockup[data-step="2"] .wf-brand-sfdc{padding:4px}
       .hiw-media .hiw-mockup[data-step="2"] .wf-brand-sfdc img{width:100%;height:auto;max-height:100%;object-fit:contain;display:block}
 
-      /* Step 1 — reductive Account Mapping snippet */
       .hiw-media .hiw-mockup[data-step="0"]{padding:28px 24px 0;display:flex;flex-direction:row;align-items:flex-start;justify-content:center;background:transparent;overflow:hidden}
       .hiw-media .hiw-mockup[data-step="0"]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:160px;background:linear-gradient(to bottom,rgba(14,14,31,0) 0%,rgba(14,14,31,0.9) 70%,#0E0E1F 100%);pointer-events:none;z-index:5}
       .hiw-media .s1-stage{position:relative;width:100%;max-width:560px;font-family:'Inter',-apple-system,sans-serif;color:#fff}
@@ -1896,7 +1712,6 @@
       .hiw-media .s1-tag{display:inline-flex;align-items:center;padding:2px 6px;border-radius:4px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);color:rgba(255,255,255,.78);font-size:9px;font-weight:500;letter-spacing:0;white-space:nowrap;flex-shrink:0;opacity:0;transform:translateY(4px) scale(.92);animation:s1-tag-in .35s cubic-bezier(.2,.9,.3,1) forwards;animation-delay:var(--td,0s)}
       .hiw-media .s1-tag--more{background:transparent;border:none;color:rgba(255,255,255,.5);padding:2px 4px;font-weight:500;letter-spacing:.01em}
 
-      /* Step 2 — reductive Deal Navigator snippet (same dark-glass treatment) */
       .hiw-media .hiw-mockup[data-step="1"]{padding:28px 24px 0;display:flex;flex-direction:row;align-items:flex-start;justify-content:center;background:transparent;overflow:hidden}
       .hiw-media .hiw-mockup[data-step="1"]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:160px;background:linear-gradient(to bottom,rgba(14,14,31,0) 0%,rgba(14,14,31,0.9) 70%,#0E0E1F 100%);pointer-events:none;z-index:5}
       .hiw-media .s2-stage{position:relative;width:100%;max-width:560px;font-family:'Inter',-apple-system,sans-serif;color:#fff}
@@ -1948,7 +1763,7 @@
       .hiw-media .s2-pop-list{margin:0;padding-left:14px;font-size:9.5px;color:rgba(255,255,255,.78);line-height:1.45;list-style:disc}
       .hiw-media .s2-pop-list li{margin-bottom:4px}
       .hiw-media .s2-pop-list li:last-child{margin-bottom:0}
-      /* Surveypal (row 1) flame pulse — fires just before the Recommended popover appears */
+      
       .hiw-media .s2-rows .s2-row:first-child .s2-flame{animation:s2-flame-pulse .7s ease-in-out 1.0s 1;transform-origin:center}
       @keyframes s2-flame-pulse{0%,55%,100%{transform:scale(1)}20%{transform:scale(1.7)}35%{transform:scale(.85)}}
       .hiw-media .s2-pop-list--narrative{padding-left:0;list-style:none}
@@ -1963,11 +1778,11 @@
       .hiw-media .s1-av--more{background:transparent;border:none;width:auto;min-width:0;padding:0 0 0 6px;margin-left:0;color:rgba(255,255,255,.5);font-size:10.5px;font-weight:500;overflow:visible}
       @keyframes s1-av-pop{0%{opacity:0;transform:translateX(-6px) scale(.7)}60%{opacity:1;transform:translateX(0) scale(1.12)}100%{opacity:1;transform:translateX(0) scale(1)}}
       @keyframes s1-fade{to{opacity:1}}
-      /* Step 4 — reductive Performance Dashboard snippet (same dark-glass treatment) */
+      
       .hiw-media .hiw-mockup[data-step="3"]{padding:28px 24px 0;display:flex;flex-direction:row;align-items:flex-start;justify-content:center;background:transparent;overflow:hidden}
       .hiw-media .hiw-mockup[data-step="3"]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(to bottom,rgba(14,14,31,0) 0%,rgba(14,14,31,0.85) 85%,#0E0E1F 100%);pointer-events:none;z-index:5}
       .hiw-media .s4-stage{position:relative;width:100%;max-width:560px;font-family:'Inter',-apple-system,sans-serif;color:#fff}
-      /* Closed-Lost opportunity table */
+      
       .hiw-media .s4-lost{margin-top:10px;border:1px solid rgba(255,255,255,.08);border-radius:8px;background:rgba(255,255,255,.02);overflow:hidden;opacity:0;transform:translateY(6px);animation:s1-row-in .5s cubic-bezier(.2,.9,.3,1) 1.85s forwards}
       .hiw-media .s4-lost-cols{display:grid;grid-template-columns:1.5fr 0.9fr 0.7fr 0.85fr 1.1fr;gap:8px;padding:8px 10px;font-family:var(--cb-font-display);font-size:8.5px;font-weight:600;color:rgba(255,255,255,.5);letter-spacing:.02em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.08)}
       .hiw-media .s4-lrow{display:grid;grid-template-columns:1.5fr 0.9fr 0.7fr 0.85fr 1.1fr;gap:8px;align-items:center;padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.05);font-size:9.5px;color:#fff;opacity:0;transform:translateY(4px);animation:s1-row-in .4s cubic-bezier(.2,.9,.3,1) forwards;animation-delay:var(--rd,0s)}
@@ -2044,7 +1859,6 @@
 
             @media (max-width:900px){#how-it-works .hiw-grid{grid-template-columns:1fr;gap:40px}}
 
-/* orbit on the left, copy on the right (DOM stays copy-first for screen readers) */
         #agentic .integrations-inner{grid-template-columns:0.9fr 1fr}
         #agentic .stage{order:1;max-width:520px;margin:0 auto}
         #agentic .integrations-copy{order:2}
@@ -2060,13 +1874,12 @@
         .ai-cta-ghost i{transition:transform .2s}
         .ai-cta-ghost:hover i{transform:translateX(3px)}
 
-        /* Recolor accents: teal/blue -> pink (scoped to this section) */
         .proof-wrap .module-eyebrow{background:rgba(215,208,255,.10);color:#D7D0FF;border-color:rgba(215,208,255,.28)}
         #agentic .module-eyebrow{background:rgba(247,209,253,.10);color:#F7D1FD;border-color:rgba(247,209,253,.28)}
         #agentic .ai-outcome .eb{color:#F7D1FD}
         #agentic .int-cta{background:rgba(247,209,253,.12);border-color:rgba(247,209,253,.40);color:#F7D1FD}
         #agentic .int-cta:hover{background:rgba(247,209,253,.20);border-color:rgba(247,209,253,.60)}
-        /* orbit animation */
+        
         #agentic .rings .seg{animation-name:cb-seg-pulse-pink}
         #agentic .rings .feed{stroke:rgba(247,209,253,.18);animation-name:cb-feed-flow,cb-feed-pulse-pink}
         #agentic .rings .heart{stroke:rgba(247,209,253,.7)}
@@ -2074,14 +1887,14 @@
         @keyframes cb-seg-pulse-pink{0%,100%{stroke:rgba(255,255,255,.10);stroke-width:1.5;filter:drop-shadow(0 0 0 rgba(247,209,253,0))}50%{stroke:rgba(247,209,253,.55);stroke-width:1.75;filter:drop-shadow(0 0 3px rgba(247,209,253,.35))}}
         @keyframes cb-feed-pulse-pink{0%,100%{stroke:rgba(247,209,253,.18)}50%{stroke:rgba(247,209,253,.55)}}
         @keyframes cb-heartbeat-pink{0%,30%,100%{border-color:rgba(247,209,253,.30)}8%{border-color:rgba(247,209,253,.95)}16%{border-color:rgba(247,209,253,.50)}22%{border-color:rgba(247,209,253,.85)}}
-        /* Segment hover: darken the wedge, fade the brand, center an open-link icon on the logo */
+        
         .p-circle .rings .seg{transition:fill .2s ease}
         .p-circle .rings .seg:hover,.p-circle .rings .seg.is-hover{fill:#050518}
         .p-circle .seg-logo .brand{transition:opacity .2s ease,transform .2s ease}
         .p-circle .seg-logo.is-hover .brand{opacity:0.28;transform:scale(.96)}
         .p-circle .seg-logo .seg-link{position:absolute;top:50%;left:50%;font-size:22px;line-height:1;color:#fff;opacity:0;transform:translate(-50%,-50%) scale(.7);transition:opacity .2s ease,transform .25s cubic-bezier(.2,.9,.3,1.3);pointer-events:none}
         .p-circle .seg-logo.is-hover .seg-link{opacity:1;transform:translate(-50%,-50%) scale(1)}
-        /* Center Crossbeam mark — hover: fade the mark, reveal the open-link icon, soft glow */
+        
         .p-circle .center-circle{cursor:pointer;transition:transform .25s ease,box-shadow .25s ease}
         .p-circle .center-circle:hover{box-shadow:0 0 80px -20px rgba(247,209,253,.55) inset, 0 0 70px -10px rgba(247,209,253,.45)}
         .p-circle .center-circle .cb-svg{transition:opacity .2s ease,transform .2s ease}
@@ -2097,7 +1910,7 @@
       .int-chip--more{background:transparent;color:rgba(255,255,255,.6);border-color:rgba(255,255,255,.18)}
       @media (max-width:768px){
         #agentic .stage{display:none!important}
-        /* Flatten the copy block so the CTA can drop below the chips */
+        
         #agentic .integrations-inner{display:flex!important;flex-direction:column;gap:0!important}
         #agentic .integrations-copy{display:contents}
         #agentic .module-eyebrow{align-self:flex-start}
@@ -2122,7 +1935,6 @@
     .demo-cta .demo-copy p{margin-left:auto;margin-right:auto}
     .demo-cta-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px}
 
-/* footer list collision safety */
 .footer ul,.footer-bar ul{list-style:none!important;padding-left:0!important}
 .footer li,.footer-bar li{list-style:none!important}
 .footer li::marker,.footer-bar li::marker{content:""!important}
