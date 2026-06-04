@@ -531,7 +531,7 @@
     /* IMPORTANT: kill any inherited background on .hero-bg. The Webflow site has a leftover
        .hero-bg class (from an old event page) that sets background:...url(orb-image) — that
        static orb is what flashed on load. Also fade the iframe in to hide its white load frame. */
-    .hero .hero-bg{position:absolute !important;left:0;right:0;top:-30%;width:100%;height:130%;border:0;pointer-events:none;z-index:0;background:none !important;opacity:0;animation:heroBgIn 1.2s ease .5s forwards}
+    .hero .hero-bg{position:absolute !important;left:0;right:0;top:-30%;width:100%;height:130%;border:0;pointer-events:none;z-index:0;background:none !important;opacity:0;animation:heroBgIn 1.2s ease .15s forwards}
     @keyframes heroBgIn{from{opacity:0}to{opacity:1}}
     .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:800px;background:linear-gradient(180deg,rgba(3,3,23,0) 0%,#030317 70%,#030317 100%);pointer-events:none;z-index:1}
     .hero-inner{position:relative;z-index:2}
