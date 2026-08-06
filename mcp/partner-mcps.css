@@ -557,6 +557,11 @@
     /* --- use-cases section: centred header + switcher ------------------- */
     /* .tm-head is max-width:780px with `margin:0 0 48px`, so the block hugs the left of
        the 1240px inner. Centring the text alone is not enough; the box needs auto margins. */
+    /* The wall is the last section now that the closing CTA is gone, so .tm-section's 104px
+       is all that separates the final logo row from the footer. Clamped rather than
+       breakpointed so it eases down on narrow screens. */
+    #servers{padding-bottom:clamp(104px,11vw,176px)}
+
     #usecases .tm-head{text-align:center;margin-left:auto;margin-right:auto}
     #usecases .tm-sub{margin-left:auto;margin-right:auto}
     #usecases .mm-tabs{margin-left:auto;margin-right:auto}
@@ -566,6 +571,17 @@
        static orb is what flashed on load. Also fade the iframe in to hide its white load frame. */
     .hero .hero-bg{position:absolute !important;left:0;right:0;top:-30%;width:100%;height:130%;border:0;pointer-events:none;z-index:0;background:none !important;opacity:0;animation:heroBgIn 1.2s ease .15s forwards}
     @keyframes heroBgIn{from{opacity:0}to{opacity:1}}
+
+    /* --- wall tiles that link out to a Partner MCP page ---------------------------------
+       Only the <a> tiles get the pointer and hover lift; tiles with no CMS page stay as
+       <div> and read as non-interactive, which is the honest signal. */
+    a.tm-slot{text-decoration:none;cursor:pointer;
+      transition:border-color .16s ease,transform .16s ease,background .16s ease}
+    a.tm-slot:hover{border-color:rgba(255,255,255,.34);transform:translateY(-2px);
+      background:rgba(255,255,255,.05)}
+    a.tm-slot:hover img{opacity:1}
+    a.tm-slot:focus-visible{outline:2px solid var(--cb-violet);outline-offset:2px}
+    @media (prefers-reduced-motion:reduce){a.tm-slot,a.tm-slot:hover{transition:none;transform:none}}
 
 /* Webflow injects li{padding-bottom:14px} site-wide, which loosens every list
    inside an embed. Reset it within this page's own scopes. */
