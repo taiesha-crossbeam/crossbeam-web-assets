@@ -583,6 +583,12 @@
     a.tm-slot:focus-visible{outline:2px solid var(--cb-violet);outline-offset:2px}
     @media (prefers-reduced-motion:reduce){a.tm-slot,a.tm-slot:hover{transition:none;transform:none}}
 
+    /* --- marquee logos that link out ----------------------------------------------------
+       The track already pauses on :hover, which is what makes these clickable at all.
+       Crossbeam's own mark stays a <span>, so only partner logos get the pointer. */
+    a.mm-marquee-item{text-decoration:none;cursor:pointer}
+    a.mm-marquee-item:focus-visible{outline:2px solid #fff;outline-offset:3px;border-radius:6px}
+
 /* Webflow injects li{padding-bottom:14px} site-wide, which loosens every list
    inside an embed. Reset it within this page's own scopes. */
 .mm-pairs li,.mm-unlocks li,.mm-stack li{padding-bottom:0}
