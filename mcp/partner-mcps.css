@@ -1,21 +1,21 @@
 /* ===================================================================
-   Crossbeam Design System — colors + type
+   Crossbeam Design System - colors + type
    =================================================================== */
 /* -------- Brand fonts: Usual (licensed OTFs) -------------------------
    Crossbeam's display/body face. */
 /* Space Mono (small labels) + Inter (UI/numeric fallback) */
 :root{
   /* ---------- Brand marks (logo) ---------- */
-  --cb-mark-teal:   #7ED0DB;   /* top half of the ✕ logo */
-  --cb-mark-red:    #EE3652;   /* bottom half of the ✕ logo */
+  --cb-mark-teal:   #7ED0DB;   /* top half of the x logo */
+  --cb-mark-red:    #EE3652;   /* bottom half of the x logo */
   /* ---------- Neutrals / surfaces ---------- */
   --cb-white:       #FFFFFF;
   --cb-off-white:   #FDFDFD;
   --cb-paper:       #F1F1F1;   /* inset card on light bg */
   --cb-cream:       #E8E8E8;   /* the site's "light" background */
   --cb-mist:        #D9D9D9;   /* neutral button fill on light bg */
-  --cb-ink:         #030317;   /* darkest — "Ink" */
-  --cb-midnight:    #10103B;   /* default dark — "Midnight" */
+  --cb-ink:         #030317;   /* darkest - "Ink" */
+  --cb-midnight:    #10103B;   /* default dark - "Midnight" */
   --cb-teal-dark:   #051E22;   /* alt dark, paired with mint */
   --cb-plum-dark:   #2B042A;   /* alt dark, paired with pink */
   /* ---------- Text ---------- */
@@ -25,17 +25,17 @@
   --cb-fg-soft:     #84898F;   /* tertiary / metadata */
   --cb-fg-inverse:  #FFFFFF;   /* H1 on dark */
   --cb-fg-inverse-dim: rgba(255, 255, 255, 0.8); /* body on dark */
-  /* ---------- Accents — 4 core hues, each with a tint ---------- */
-  --cb-violet:      #540AE5;   /* core accent · primary CTA + links */
+  /* ---------- Accents - 4 core hues, each with a tint ---------- */
+  --cb-violet:      #540AE5;   /* core accent - primary CTA + links */
   --cb-violet-tint: #F3F1FF;   /* lightest tint for surfaces/backgrounds */
   --cb-violet-grad: linear-gradient(135deg, #F3F1FF 0%, #540AE5 100%);
-  --cb-teal:        #0097A7;   /* core accent · data / success tones */
+  --cb-teal:        #0097A7;   /* core accent - data / success tones */
   --cb-teal-tint:   #EAFFFC;   /* lightest tint */
   --cb-teal-grad:   linear-gradient(135deg, #EAFFFC 0%, #0097A7 100%);
-  --cb-fuchsia:     #E044EB;   /* core accent · highlight / feature */
+  --cb-fuchsia:     #E044EB;   /* core accent - highlight / feature */
   --cb-fuchsia-tint:#FEF4FF;   /* lightest tint */
   --cb-fuchsia-grad:linear-gradient(135deg, #FEF4FF 0%, #E044EB 100%);
-  --cb-navy:        #10103B;   /* core accent · deep brand (also dark bg) */
+  --cb-navy:        #10103B;   /* core accent - deep brand (also dark bg) */
   --cb-navy-tint:   #F3F1FF;   /* shared with violet tint */
   --cb-navy-grad:   linear-gradient(135deg, #F3F1FF 0%, #10103B 100%);
   /* Legacy aliases (kept for existing previews; prefer core tokens above) */
@@ -77,7 +77,7 @@
   --cb-space-9:  120px;
   --cb-gutter:   100px;   /* horizontal page padding at 1440 */
 }/* =========================================================
-   Type roles — semantic
+   Type roles - semantic
    ========================================================= */
 .cb-eyebrow{
   font-family: var(--cb-font-mono);
@@ -164,7 +164,7 @@
   letter-spacing: var(--cb-tracking);
   color: var(--cb-fg-strong);
 }/* =========================================================
-   Components — buttons,tags
+   Components - buttons,tags
    ========================================================= */
 .cb-btn{
   display: inline-flex;
@@ -199,7 +199,7 @@
   background: transparent;
   color: var(--cb-navy);
   box-shadow: inset 0 0 0 1px rgba(16,16,59,0.18);
-}.cb-btn--ghost-light:hover{ background: rgba(16,16,59,0.04); }/* Slate — solid dark slate grey,for CTAs on light backgrounds */
+}.cb-btn--ghost-light:hover{ background: rgba(16,16,59,0.04); }/* Slate - solid dark slate grey,for CTAs on light backgrounds */
 .cb-btn--slate{
   background: #1C2127;
   color: #fff;
@@ -228,7 +228,7 @@
   background: transparent;
   color: #fff;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25);
-}.cb-btn--ghost-dark:hover{ background: rgba(255,255,255,0.06); }/* Primary CTAs on dark — full-color tinted to pair with surface */
+}.cb-btn--ghost-dark:hover{ background: rgba(255,255,255,0.06); }/* Primary CTAs on dark - full-color tinted to pair with surface */
 .cb-btn--primary-midnight,.cb-btn--primary-teal-dark{
   background: #FFFFFF;
   color: #10103B;
@@ -248,8 +248,8 @@
   background: #E4DEFF;
   transform: translateY(-1px);
   box-shadow: 0 14px 40px -10px rgba(215,208,255,.55);
-}/* Ghost / secondary on dark — Pace-style: subtle tinted fill + 1px tinted border,lifts on hover.
-   Each variant pairs with its surface’s primary accent (mint on midnight/teal-dark,lavender on plum-dark). */
+}/* Ghost / secondary on dark - Pace-style: subtle tinted fill + 1px tinted border,lifts on hover.
+   Each variant pairs with its surface's primary accent (mint on midnight/teal-dark,lavender on plum-dark). */
 .cb-btn--ghost-midnight,.cb-btn--ghost-teal-dark{
   background: rgba(156,255,248,0.08);
   color: #9CFFF8;
@@ -259,7 +259,7 @@
   background: rgba(156,255,248,0.13);
   color: #9CFFF8;
   box-shadow: inset 0 0 0 1px rgba(156,255,248,0.34);
-}/* Ghost on the bright hero/teal field — darker glass fill so it doesn't wash out */
+}/* Ghost on the bright hero/teal field - darker glass fill so it doesn't wash out */
 .cb-btn--ghost-midnight{
   background: rgba(3,3,23,0.34);
   box-shadow: inset 0 0 0 1px rgba(156,255,248,0.30);
@@ -321,7 +321,7 @@
   background: var(--cb-card);
   border-radius: var(--cb-radius-card);
   padding: 20px;
-}/* radial glow blob — place inside an overflow:hidden parent */
+}/* radial glow blob - place inside an overflow:hidden parent */
 .cb-glow{
   position: absolute;
   width: 993px;
@@ -342,7 +342,7 @@
     .cta{padding:140px var(--cb-gutter);text-align:center;overflow:hidden}.cta::before{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:1100px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(0,151,167,.4),transparent 60%);filter:blur(80px);pointer-events:none}.cta::after{content:"";position:absolute;left:50%;bottom:-120px;transform:translateX(-50%);width:900px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(224,68,235,.25),transparent 60%);filter:blur(80px);pointer-events:none}.cta h2{font-family:var(--cb-font-display);font-weight:500;font-size:64px;line-height:100%;letter-spacing:var(--cb-tracking);margin:0 auto 28px;color:#fff;max-width:880px;text-wrap:balance;position:relative}.cta p{font-size:18px;color:rgba(255,255,255,.8);margin:0 auto 36px;max-width:540px;line-height:140%;position:relative}.cta-row{display:flex;gap:12px;justify-content:center;position:relative;flex-wrap:wrap}/* ---------- RESPONSIVE ---------- */
     @media (max-width: 1100px){.hero,.logo-wall,.text-reveal,.cta,.footer{padding-left:48px;padding-right:48px}.hero{padding-top:140px}.module-h2{font-size:40px}
     }@media (max-width: 720px){.hero h1{font-size:40px}.cta h2{font-size:44px}.text-reveal p{font-size:24px}.logo-wall .lw-heading{font-size:12px}
-    }.mcp-hero{padding:172px 48px 150px;min-height:94vh;display:flex;align-items:center}.mcp-hero::after{height:300px}/* shrink bottom fade so it never covers the copy/CTAs */
+    }.mcp-hero{padding:172px 48px 120px;min-height:74vh;display:flex;align-items:center}.mcp-hero::after{height:300px}/* shrink bottom fade so it never covers the copy/CTAs */
     .mcp-hero::before{display:none}/* kill the inherited homepage teal glow-blob that haloed the nav */
     .mcp-hero .hero-inner{max-width:1000px;z-index:3}/* lift content above the ::after fade */
     .mcp-hero h1{font-size:clamp(40px,5.6vw,66px);font-weight:400;line-height:1.08;text-wrap:balance}.mcp-hero .hero-lead{font-size:21px;line-height:1.55;color:rgba(255,255,255,.72);margin:28px auto 40px;max-width:760px;text-wrap:pretty}.mcp-hero .hero-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}.mcp-hero .hero-cta .cb-btn{gap:9px}.mcp-hero .hero-cta .mcp-btn-logo{width:18px;height:18px;object-fit:contain;flex-shrink:0}.mcp-hero-eyebrow{display:inline-block;font-family:var(--cb-font-mono);font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.32);border-radius:6px;padding:8px 16px;margin-bottom:22px;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}.mcp-hero-tools{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:30px;margin:0 0 12px}.mcp-hero-tools svg{height:26px;width:auto;display:block;opacity:.9}.mcp-hero-tools svg path{fill:#fff}@media (max-width:768px){.mcp-hero-tools{gap:24px}.mcp-hero-tools svg{height:22px}}.mcp-hero-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(4,5,20,.28) 0%,rgba(4,5,20,.5) 52%,rgba(4,5,20,.42) 100%)}.mcp-hero .cb-btn--primary-teal-dark{background:#fff;color:#0B1629;box-shadow:none}.mcp-hero .cb-btn--primary-teal-dark:hover{background:rgba(255,255,255,.88);color:#0B1629}.mcp-hero .cb-btn--ghost-teal-dark{color:#fff;background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.42)}.mcp-hero .cb-btn--ghost-teal-dark:hover{color:#fff;background:rgba(255,255,255,.14);box-shadow:inset 0 0 0 1px rgba(255,255,255,.6)}@media (max-width:768px){.mcp-hero{padding:130px 24px 90px}.mcp-hero .hero-lead{font-size:18px}}/* ============================================================
@@ -443,8 +443,8 @@
        LIGHT SECTION (#usecases)
        Values lifted from clay-mcp-revised-cdn.html so the light treatment
        matches the shipped Clay pairing page exactly:
-         section #FAFAFA · card #FCFCFD + 1px rgba(16,16,59,.10)
-         h2/h3 #1C2127 · sub #5A6472 · body var(--cb-fg-muted)
+         section #FAFAFA - card #FCFCFD + 1px rgba(16,16,59,.10)
+         h2/h3 #1C2127 - sub #5A6472 - body var(--cb-fg-muted)
          prompt linear-gradient(#fff,#FBFAFF) + #E4E1EC,text #3A4452,label #9A93B5
        ============================================================ */
     /* Neutral ladder: section (paper) -> card (white) -> inset (light grey).
@@ -472,7 +472,7 @@
     }/* Mobile nav reinforcement,verbatim from mcp-revised-cdn.html. Required because
        equal specificity,so without !important the CTA buttons stay visible at 375px. */
     @media (max-width:1000px){
-      /* 10. Mobile nav — logo + burger only (reinforced) */
+      /* 10. Mobile nav - logo + burger only (reinforced) */
     }@media (max-width:1000px){
     }
   
@@ -510,7 +510,7 @@
     @media (prefers-reduced-motion:reduce){.hero-field::after{animation:none}}
     .mcp-hero::before{display:none}
 /* ---------- LOGO MARQUEE ---------- */
-    .mm-marquee{background:#030317;padding:38px 0 10px;overflow:hidden;position:relative}
+    .mm-marquee{background:#030317;padding:38px 0 48px;overflow:hidden;position:relative}
     .mm-marquee-label{text-align:center;font-family:var(--cb-font-mono);font-size:11px;
       text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.42);margin:0 0 22px}
     .mm-marquee-viewport{position:relative;overflow:hidden;
@@ -545,5 +545,13 @@
     .mm-answer .kw{font-family:var(--cb-font-mono);font-size:12.5px;color:rgba(255,255,255,.6)}
     .mm-answer.miss{border-color:rgba(224,68,235,.34);background:rgba(3,3,23,.55)}
 
-/* Webflow injects li{padding-bottom:14px} site-wide; reset inside this page. */
+    /* --- use-cases section: centred header + switcher ------------------- */
+    /* .tm-head is max-width:780px with `margin:0 0 48px`, so the block hugs the left of
+       the 1240px inner. Centring the text alone is not enough; the box needs auto margins. */
+    #usecases .tm-head{text-align:center;margin-left:auto;margin-right:auto}
+    #usecases .tm-sub{margin-left:auto;margin-right:auto}
+    #usecases .mm-tabs{margin-left:auto;margin-right:auto}
+
+/* Webflow injects li{padding-bottom:14px} site-wide, which loosens every list
+   inside an embed. Reset it within this page's own scopes. */
 .mm-pairs li,.mm-unlocks li,.mm-stack li{padding-bottom:0}
