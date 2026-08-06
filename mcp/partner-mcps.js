@@ -1,4 +1,21 @@
 /* Partner MCPs page behaviour. Deferred, so it runs after the embeds parse. */
+
+(function(){
+  /* Move each continuation chunk's children into the grid it belongs to, then drop the
+     empty wrapper. querySelectorAll returns document order, so chunks are appended in the
+     order they were pasted. This block runs before the tab and marquee scripts, which
+     measure panel heights and need the real DOM in place first. */
+  var TARGET = {wall: '.tm-wall', panels: '#mmPanels'};
+  var wraps = document.querySelectorAll('.pm-adopt');
+  for (var i = 0; i < wraps.length; i++) {
+    var w = wraps[i];
+    var into = document.querySelector(TARGET[w.getAttribute('data-into')]);
+    if (!into) continue;
+    while (w.firstElementChild) into.appendChild(w.firstElementChild);
+    if (w.parentNode) w.parentNode.removeChild(w);
+  }
+})();
+
 (function(){var L=[["https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/img/logo-white.svg","Crossbeam",24.8],["https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/img/mcp-logos/hubspot.svg","HubSpot",30.1],["https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/img/mcp-logos/salesforce.svg","Salesforce",34.0],["https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/img/mcp-logos/zoom.svg","Zoom",27.0],["https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/img/mcp-logos/slack.png","Slack",28.7],["https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/img/mcp-logos/docusign.svg","DocuSign",25.4],["https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/img/mcp-logos/marketo-marketo-forms.svg","Marketo",23.3],["https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/img/mcp-logos/stripe.svg","Stripe",34.0],["https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/img/mcp-logos/salesloft.svg","Salesloft",26.7],["https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/img/mcp-logos/snowflake.svg","Snowflake",26.8],["https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/img/mcp-logos/tableau.svg","Tableau",25.5],["https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/img/mcp-logos/looker.svg","Looker",29.2],["https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/img/mcp-logos/zapier.svg","Zapier",29.5],["https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/img/mcp-logos/netsuite.svg","NetSuite",10.4],["https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/img/mcp-logos/mailchimp.png","Mailchimp",29.8],["https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/img/mcp-logos/microsoft.svg","Power BI",26.1],["https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/img/mcp-logos/dbt.svg","dbt",34.0],["https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/img/mcp-logos/intercom.svg","Intercom",27.1],["https://cdn.jsdelivr.net/gh/taiesha-crossbeam/crossbeam-web-assets@main/img/mcp-logos/gong.svg","Gong",33.5]],t=document.getElementById('mqTrack');if(!t)return;function row(){L.forEach(function(o){var s=document.createElement('span');s.className='mm-marquee-item';var i=document.createElement('img');i.src=o[0];i.alt=o[1];i.decoding='async';i.style.height=o[2]+'px';s.appendChild(i);t.appendChild(s);});}row();row();})();
 
 /* Motion switcher. Pill-slide logic ported from the live Crossbeam MCP page

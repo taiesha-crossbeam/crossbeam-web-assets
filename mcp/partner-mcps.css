@@ -555,3 +555,10 @@
 /* Webflow injects li{padding-bottom:14px} site-wide, which loosens every list
    inside an embed. Reset it within this page's own scopes. */
 .mm-pairs li,.mm-unlocks li,.mm-stack li{padding-bottom:0}
+
+/* --- embed adoption --------------------------------------------------------------------
+   Webflow balances each HTML Embed on its own, so continuation chunks arrive as separate
+   .pm-adopt wrappers rather than as children of the grid they belong to. Hidden here so
+   they never flash as loose rows before partner-mcps.js relocates them. */
+.pm-adopt{display:none}
+
